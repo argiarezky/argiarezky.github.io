@@ -1,39 +1,405 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Argia Rezky Pratama, Web Developer dan UI/UX Designer.">
     <title>Argia Rezky Pratama | Portfolio</title>
-    <meta name="description" content="Portfolio Web Developer dan UI/UX Designer.">
-</head>
-<body>
-    <header>
-        <h1>Argia Rezky Pratama</h1>
-        <p>Web Developer & UI/UX Designer</p>
-    </header>
 
-    <main>
-        <section>
-            <h2>Tentang Saya</h2>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f9fb;
+            color: #20242c;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: min(1080px, 90%);
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 19px;
+            letter-spacing: -0.5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555d6b;
+            margin-left: 24px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #1677ff;
+        }
+
+        .hero {
+            padding: 100px 0 110px;
+            max-width: 780px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #1769db;
+            background: #e8f1ff;
+            padding: 7px 13px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 7vw, 68px);
+            line-height: 1.12;
+            letter-spacing: -2.5px;
+            margin-bottom: 24px;
+        }
+
+        h1 span {
+            color: #1677ff;
+        }
+
+        .hero p {
+            color: #667080;
+            font-size: 17px;
+            max-width: 620px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 19px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .primary {
+            color: white;
+            background: #1677ff;
+        }
+
+        .secondary {
+            color: #20242c;
+            border: 1px solid #dce0e7;
+            background: white;
+        }
+
+        section {
+            padding: 55px 0;
+        }
+
+        .section-label {
+            color: #1677ff;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 30px;
+            letter-spacing: -1px;
+            margin: 8px 0 16px;
+        }
+
+        .muted {
+            color: #667080;
+            max-width: 700px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .project {
+            background: white;
+            border: 1px solid #e7eaf0;
+            border-radius: 12px;
+            padding: 26px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: #b8d4ff;
+        }
+
+        .project-number {
+            font-size: 13px;
+            color: #1677ff;
+            font-weight: 800;
+        }
+
+        .project h3 {
+            margin: 12px 0 8px;
+            font-size: 20px;
+        }
+
+        .project p {
+            color: #667080;
+            font-size: 14px;
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 18px;
+        }
+
+        .tech span {
+            background: #f0f3f7;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: #4d5665;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .skills span {
+            background: white;
+            border: 1px solid #e0e4eb;
+            padding: 10px 15px;
+            border-radius: 7px;
+            font-size: 14px;
+        }
+
+        .contact {
+            background: #eef4ff;
+            border: 1px solid #dce8ff;
+            padding: 32px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        footer {
+            border-top: 1px solid #e7eaf0;
+            padding: 25px 0;
+            margin-top: 70px;
+            color: #78808d;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                align-items: flex-start;
+                gap: 15px;
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0 15px 0 0;
+            }
+
+            .hero {
+                padding: 65px 0 75px;
+            }
+
+            h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 38px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">Argia.dev</div>
+            <div>
+                <a href="#about">Tentang</a>
+                <a href="#projects">Proyek</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Kontak</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <span class="tag">PORTFOLIO • WEB DEVELOPMENT & UI/UX</span>
+
+            <h1>Halo, saya Argia.<br>
+                Saya membangun <span>solusi digital.</span>
+            </h1>
+
             <p>
-                Saya siswa SMK Telkom Jakarta yang tertarik pada
-                pengembangan web dan desain antarmuka.
+                Siswa SMK Telkom Jakarta yang berfokus pada
+                pengembangan aplikasi web dan desain antarmuka.
+                Saya senang mengubah ide menjadi produk digital
+                yang fungsional dan mudah digunakan.
+            </p>
+
+            <div class="actions">
+                <a href="#projects" class="button primary">
+                    Lihat Proyek
+                </a>
+                <a href="#contact" class="button secondary">
+                    Hubungi Saya
+                </a>
+            </div>
+        </header>
+
+        <section id="about">
+            <div class="section-label">Tentang Saya</div>
+            <h2>Mengenal saya lebih dekat.</h2>
+            <p class="muted">
+                Saya mempelajari pengembangan web, pengelolaan database,
+                dan UI/UX Design melalui proyek sekolah serta praktik
+                langsung. Portfolio ini berisi proyek yang saya kerjakan
+                sebagai bagian dari proses belajar dan pengembangan skill.
             </p>
         </section>
 
-        <section>
-            <h2>Proyek Saya</h2>
-            <p>SSH HelpDesk</p>
-            <p>Warehouse Management System</p>
-            <p>Sistem Informasi Manajemen Siswa</p>
-            <p>UI/UX Design dengan Figma</p>
+        <section id="projects">
+            <div class="section-label">Selected Work</div>
+            <h2>Proyek pilihan.</h2>
+            <p class="muted">
+                Beberapa proyek pengembangan aplikasi dan desain
+                yang pernah saya kerjakan.
+            </p>
+
+            <div class="projects">
+                <article class="project">
+                    <div class="project-number">PROJECT 01</div>
+                    <h3>SSH HelpDesk</h3>
+                    <p>
+                        Aplikasi ticketing internal untuk mengelola
+                        laporan, status tiket, dan aktivitas penanganan.
+                    </p>
+                    <div class="tech">
+                        <span>Laravel</span>
+                        <span>PHP</span>
+                        <span>Database</span>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-number">PROJECT 02</div>
+                    <h3>Warehouse Management</h3>
+                    <p>
+                        Aplikasi pengelolaan gudang dengan dashboard
+                        staf dan pengelola serta fitur unggah gambar.
+                    </p>
+                    <div class="tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-number">PROJECT 03</div>
+                    <h3>SI Manajemen Siswa</h3>
+                    <p>
+                        Proyek sistem informasi untuk mempelajari
+                        autentikasi dan pengelolaan data siswa.
+                    </p>
+                    <div class="tech">
+                        <span>Laravel</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-number">PROJECT 04</div>
+                    <h3>UI/UX Design</h3>
+                    <p>
+                        Proyek desain antarmuka dan perancangan
+                        pengalaman pengguna menggunakan Figma.
+                    </p>
+                    <div class="tech">
+                        <span>Figma</span>
+                        <span>UI Design</span>
+                        <span>UX Design</span>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section>
-            <h2>Kontak</h2>
-            <p>GitHub: Tambahkan link GitHub kamu di sini.</p>
+        <section id="skills">
+            <div class="section-label">Keahlian</div>
+            <h2>Tools yang saya pelajari.</h2>
+
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>Git & GitHub</span>
+                <span>Figma</span>
+            </div>
         </section>
-    </main>
+
+        <section id="contact">
+            <div class="section-label">Kontak</div>
+            <div class="contact">
+                <h2>Mari terhubung.</h2>
+                <p class="muted">
+                    Lihat kode dan perkembangan proyek saya melalui GitHub.
+                </p>
+                <div class="actions">
+                    <a class="button primary"
+                       href="https://github.com/ArgiaX"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Kunjungi GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 Argia Rezky Pratama. Dibuat dengan HTML dan CSS.
+        </footer>
+    </div>
 </body>
 </html>
