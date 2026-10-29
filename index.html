@@ -1,632 +1,342 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Argia Rezky Pratama, Web Developer dan UI/UX Designer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Portfolio Argia Rezky Pratama, Web Developer dan siswa Software Engineering.">
+
     <title>Argia Rezky Pratama | Portfolio</title>
 
-    <style>
-        :root {
-            --bg: #ffffff;
-            --surface: #f7f8fa;
-            --text: #20242c;
-            --muted: #737b88;
-            --border: #e8eaee;
-            --accent: #2563eb;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 85px;
-        }
-
-        body {
-            font-family: Inter, -apple-system, BlinkMacSystemFont,
-                "Segoe UI", sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            font-size: 14px;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: min(900px, calc(100% - 40px));
-            margin: auto;
-        }
-
-        /* NAVBAR */
-
-        nav {
-            height: 66px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .brand {
-            font-size: 15px;
-            font-weight: 750;
-            letter-spacing: -0.5px;
-        }
-
-        .brand span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            font-size: 13px;
-            color: var(--muted);
-            transition: color .2s;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--text);
-        }
-
-        /* INTRO */
-
-        .hero {
-            padding: 76px 0 58px;
-        }
-
-        .availability {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #566171;
-            font-size: 12px;
-            margin-bottom: 20px;
-        }
-
-        .dot {
-            width: 7px;
-            height: 7px;
-            background: #22a06b;
-            border-radius: 50%;
-        }
-
-        h1 {
-            font-size: clamp(32px, 5vw, 46px);
-            letter-spacing: -1.9px;
-            line-height: 1.2;
-            font-weight: 750;
-            margin-bottom: 17px;
-        }
-
-        h1 span {
-            color: var(--accent);
-        }
-
-        .intro {
-            color: var(--muted);
-            max-width: 570px;
-            font-size: 14px;
-        }
-
-        .hero-actions {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin-top: 25px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 9px 14px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 650;
-            transition: .2s;
-        }
-
-        .button-primary {
-            color: white;
-            background: var(--text);
-        }
-
-        .button-primary:hover {
-            background: var(--accent);
-        }
-
-        .text-link {
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .text-link:hover {
-            color: var(--accent);
-        }
-
-        /* SECTIONS */
-
-        section {
-            padding: 35px 0;
-        }
-
-        .section-heading {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            gap: 15px;
-            margin-bottom: 18px;
-        }
-
-        .section-heading h2 {
-            font-size: 19px;
-            letter-spacing: -.6px;
-            font-weight: 720;
-        }
-
-        .section-heading p {
-            font-size: 12px;
-            color: var(--muted);
-        }
-
-        .about-text {
-            max-width: 690px;
-            color: #626b78;
-            font-size: 13px;
-        }
-
-        /* PROJECTS */
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-        }
-
-        .project {
-            padding: 20px;
-            border: 1px solid var(--border);
-            border-radius: 9px;
-            background: white;
-            transition: border-color .2s, transform .2s;
-        }
-
-        .project:hover {
-            border-color: #c5d5f6;
-            transform: translateY(-2px);
-        }
-
-        .project-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 14px;
-        }
-
-        .project-index {
-            color: var(--muted);
-            font-size: 11px;
-        }
-
-        .project-mark {
-            width: 30px;
-            height: 30px;
-            display: grid;
-            place-items: center;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 7px;
-            color: var(--accent);
-            font-size: 12px;
-            font-weight: 750;
-        }
-
-        .project h3 {
-            font-size: 15px;
-            letter-spacing: -.3px;
-            margin-bottom: 6px;
-        }
-
-        .project p {
-            font-size: 12px;
-            line-height: 1.8;
-            color: var(--muted);
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 15px;
-        }
-
-        .tags span {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 3px 7px;
-            font-size: 10px;
-            color: #596272;
-        }
-
-        /* SKILLS */
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-list span {
-            border: 1px solid var(--border);
-            border-radius: 5px;
-            padding: 6px 10px;
-            font-size: 12px;
-            color: #535d6c;
-        }
-
-        /* CONTACT */
-
-        .contact-box {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .contact-box h2 {
-            font-size: 18px;
-            letter-spacing: -.5px;
-            margin-bottom: 5px;
-        }
-
-        .contact-box p {
-            color: var(--muted);
-            font-size: 12px;
-        }
-
-        .socials {
-            display: flex;
-            gap: 9px;
-            flex-shrink: 0;
-        }
-
-        .social {
-            width: 39px;
-            height: 39px;
-            display: grid;
-            place-items: center;
-            background: white;
-            border: 1px solid #e1e5eb;
-            border-radius: 8px;
-            color: #454d59;
-            transition: .2s;
-        }
-
-        .social svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        .social:hover {
-            color: var(--accent);
-            border-color: #b9cdf7;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            margin-top: 38px;
-            padding: 22px 0;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            gap: 12px;
-            color: var(--muted);
-            font-size: 11px;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                width: calc(100% - 32px);
-            }
-
-            nav {
-                height: 62px;
-            }
-
-            .nav-links {
-                gap: 13px;
-            }
-
-            .nav-links a {
-                font-size: 12px;
-            }
-
-            .hero {
-                padding: 58px 0 42px;
-            }
-
-            h1 {
-                letter-spacing: -1.3px;
-            }
-
-            section {
-                padding: 27px 0;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-box {
-                align-items: flex-start;
-                flex-direction: column;
-                padding: 20px;
-            }
-
-            .socials {
-                flex-wrap: wrap;
-            }
-
-            footer {
-                flex-direction: column;
-                gap: 4px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-
-            *, *::before, *::after {
-                transition: none !important;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigasi utama">
+            <a class="brand" href="#home" aria-label="Kembali ke Home">
+                argia<span>.</span>
+            </a>
 
-        <nav>
-            <a href="#home" class="brand">argia<span>.</span>dev</a>
+            <button class="menu-toggle" id="menu-toggle"
+                    type="button" aria-label="Buka menu navigasi"
+                    aria-expanded="false" aria-controls="nav-links">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 7h16M4 12h16M4 17h16"/>
+                </svg>
+            </button>
 
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link contact-link">Contact <span>↗</span></a>
             </div>
         </nav>
+    </header>
 
-        <header class="hero" id="home">
-            <div class="availability">
-                <span class="dot"></span>
-                Web Development & UI/UX Design
+    <main>
+        <section class="hero container" id="home">
+            <div class="hero-content">
+                <div class="availability">
+                    <span class="status-dot"></span>
+                    <span>Web Development · UI/UX</span>
+                </div>
+
+                <p class="eyebrow">HELLO, I'M</p>
+
+                <h1>Argia Rezky<br><span>Pratama.</span></h1>
+
+                <h2 class="hero-role">
+                    Web Developer &amp; Software Engineering Student
+                </h2>
+
+                <p class="hero-description">
+                    Saya membangun aplikasi web dan mengeksplorasi desain
+                    antarmuka. Saat ini saya terus mengembangkan skill melalui
+                    proyek dan pengalaman praktik.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="button button-primary">
+                        Lihat Project <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="#contact" class="button button-secondary">
+                        Hubungi Saya
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <span>Based in Indonesia</span>
+                    <span class="meta-divider"></span>
+                    <span>HTML · CSS · PHP · Laravel</span>
+                </div>
             </div>
 
-            <h1>Hi, I'm Argia.<br>
-                I build <span>digital solutions.</span>
-            </h1>
+            <aside class="hero-side" aria-label="Ringkasan portfolio">
+                <div class="profile-frame">
+                    <img id="profile-photo" src="" alt="Foto profil Argia Rezky Pratama" hidden>
+                    <div class="profile-fallback" id="profile-fallback" aria-hidden="true">
+                        AR<span>.</span>
+                    </div>
+                </div>
 
-            <p class="intro">
-                Siswa SMK Telkom Jakarta yang berfokus pada web development
-                dan UI/UX design. Saya suka membangun aplikasi yang
-                fungsional dan merancang antarmuka yang mudah digunakan.
-            </p>
+                <div class="side-info">
+                    <span class="side-label">CURRENT FOCUS</span>
+                    <p>Building web applications</p>
+                    <div class="side-line"></div>
+                    <span class="side-label">ALSO INTERESTED IN</span>
+                    <p>Interface &amp; user experience</p>
+                </div>
 
-            <div class="hero-actions">
-                <a href="#projects" class="button button-primary">
-                    Explore Projects ↗
-                </a>
-                <a href="#contact" class="text-link">
-                    Get in touch
-                </a>
-            </div>
-        </header>
-
-        <section id="about">
-            <div class="section-heading">
-                <h2>About me</h2>
-            </div>
-
-            <p class="about-text">
-                Saya mempelajari pengembangan aplikasi web, database,
-                dan desain antarmuka melalui proyek sekolah dan pengalaman
-                praktik. Di sini, saya mendokumentasikan proyek serta
-                proses belajar yang sudah saya jalani.
-            </p>
+                <span class="hero-index">PORTFOLIO / 2026</span>
+            </aside>
         </section>
 
-        <section id="projects">
+        <section class="section container" id="about">
             <div class="section-heading">
-                <h2>Selected projects</h2>
-                <p>04 projects</p>
+                <div>
+                    <p class="eyebrow">A LITTLE INTRODUCTION</p>
+                    <h2>About me<span>.</span></h2>
+                </div>
+                <span class="section-number">01 / ABOUT</span>
+            </div>
+
+            <div class="about-grid">
+                <p class="about-lead">
+                    Saya siswa SMK Telkom Jakarta yang tertarik pada
+                    pengembangan software, web, dan UI/UX design.
+                </p>
+
+                <div class="about-detail">
+                    <p>
+                        Saya belajar melalui proyek yang saya kerjakan,
+                        mulai dari aplikasi pengelolaan data hingga sistem
+                        ticketing. Saya juga tertarik pada cara desain
+                        antarmuka membantu pengguna menyelesaikan pekerjaan.
+                    </p>
+
+                    <p>
+                        Portfolio ini mendokumentasikan proyek, teknologi,
+                        dan perkembangan skill saya.
+                    </p>
+                </div>
+            </div>
+
+            <div class="skills-block">
+                <p class="small-label">TECH STACK &amp; TOOLS</p>
+                <div class="skill-list">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>PHP</span>
+                    <span>Laravel</span>
+                    <span>MySQL</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Figma</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container" id="projects">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">SELECTED WORK</p>
+                    <h2>Projects<span>.</span></h2>
+                </div>
+                <span class="section-number">02 / PROJECTS</span>
             </div>
 
             <div class="project-grid">
-
-                <article class="project">
+                <article class="project-card">
                     <div class="project-top">
-                        <span class="project-index">01 / DEVELOPMENT</span>
-                        <span class="project-mark">SH</span>
+                        <span class="project-category">WEB APPLICATION</span>
+                        <span class="project-icon" aria-hidden="true">01</span>
                     </div>
+
                     <h3>SSH HelpDesk</h3>
-                    <p>
-                        Aplikasi ticketing internal untuk pengelolaan tiket,
-                        status penanganan, dan aktivitas engineer.
+                    <p class="project-description">
+                        Aplikasi ticketing internal untuk mengelola laporan,
+                        status tiket, dan aktivitas penanganan.
                     </p>
-                    <div class="tags">
+
+                    <div class="project-tags">
                         <span>Laravel</span>
                         <span>PHP</span>
                         <span>Database</span>
                     </div>
+
+                    <div class="project-links">
+                        <a class="project-action" data-project="helpdesk" data-kind="demo" href="#projects">
+                            Live Demo ↗
+                        </a>
+                        <a class="project-action" data-project="helpdesk" data-kind="source" href="#projects">
+                            Source Code ↗
+                        </a>
+                    </div>
                 </article>
 
-                <article class="project">
+                <article class="project-card">
                     <div class="project-top">
-                        <span class="project-index">02 / DEVELOPMENT</span>
-                        <span class="project-mark">WH</span>
+                        <span class="project-category">INVENTORY SYSTEM</span>
+                        <span class="project-icon" aria-hidden="true">02</span>
                     </div>
+
                     <h3>Warehouse Management</h3>
-                    <p>
-                        Aplikasi pengelolaan gudang dengan dashboard staf,
-                        dashboard pengelola, dan unggah gambar.
+                    <p class="project-description">
+                        Sistem pengelolaan gudang dengan dashboard staf,
+                        dashboard pengelola, dan fitur unggah gambar.
                     </p>
-                    <div class="tags">
+
+                    <div class="project-tags">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>PHP</span>
                         <span>MySQL</span>
                     </div>
+
+                    <div class="project-links">
+                        <a class="project-action" data-project="warehouse" data-kind="demo" href="#projects">
+                            Live Demo ↗
+                        </a>
+                        <a class="project-action" data-project="warehouse" data-kind="source" href="#projects">
+                            Source Code ↗
+                        </a>
+                    </div>
                 </article>
 
-                <article class="project">
+                <article class="project-card">
                     <div class="project-top">
-                        <span class="project-index">03 / DEVELOPMENT</span>
-                        <span class="project-mark">SM</span>
+                        <span class="project-category">INFORMATION SYSTEM</span>
+                        <span class="project-icon" aria-hidden="true">03</span>
                     </div>
+
                     <h3>SI Manajemen Siswa</h3>
-                    <p>
+                    <p class="project-description">
                         Proyek sistem informasi siswa untuk mempelajari
                         autentikasi dan pengelolaan data.
                     </p>
-                    <div class="tags">
+
+                    <div class="project-tags">
                         <span>Laravel</span>
                         <span>PHP</span>
                         <span>Database</span>
                     </div>
+
+                    <div class="project-links">
+                        <a class="project-action" data-project="students" data-kind="demo" href="#projects">
+                            Live Demo ↗
+                        </a>
+                        <a class="project-action" data-project="students" data-kind="source" href="#projects">
+                            Source Code ↗
+                        </a>
+                    </div>
                 </article>
 
-                <article class="project">
+                <article class="project-card">
                     <div class="project-top">
-                        <span class="project-index">04 / DESIGN</span>
-                        <span class="project-mark">UX</span>
+                        <span class="project-category">UI/UX DESIGN</span>
+                        <span class="project-icon" aria-hidden="true">04</span>
                     </div>
+
                     <h3>UI/UX Design</h3>
-                    <p>
-                        Eksplorasi desain antarmuka dan pengalaman pengguna
-                        melalui proyek desain menggunakan Figma.
+                    <p class="project-description">
+                        Kumpulan eksplorasi desain antarmuka dan pengalaman
+                        pengguna yang dibuat menggunakan Figma.
                     </p>
-                    <div class="tags">
+
+                    <div class="project-tags">
                         <span>Figma</span>
                         <span>UI Design</span>
                         <span>UX Design</span>
                     </div>
+
+                    <div class="project-links">
+                        <a class="project-action" data-project="design" data-kind="demo" href="#projects">
+                            View Design ↗
+                        </a>
+                        <a class="project-action" data-project="design" data-kind="source" href="#projects">
+                            Case Study ↗
+                        </a>
+                    </div>
                 </article>
-
             </div>
+
+            <p class="project-note">
+                Link project yang belum tersedia akan diaktifkan setelah URL
+                demo atau repository ditambahkan.
+            </p>
         </section>
 
-        <section id="skills">
+        <section class="section container" id="contact">
             <div class="section-heading">
-                <h2>Tools & technologies</h2>
-            </div>
-
-            <div class="skill-list">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>PHP</span>
-                <span>Laravel</span>
-                <span>MySQL</span>
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Figma</span>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="section-heading">
-                <h2>Contact</h2>
-            </div>
-
-            <div class="contact-box">
                 <div>
-                    <h2>Let's connect.</h2>
+                    <p class="eyebrow">GET IN TOUCH</p>
+                    <h2>Contact<span>.</span></h2>
+                </div>
+                <span class="section-number">03 / CONTACT</span>
+            </div>
+
+            <div class="contact-panel">
+                <div class="contact-copy">
+                    <h3>Let's connect.</h3>
                     <p>
-                        Find me on these platforms.
+                        Kamu bisa menemukan saya melalui platform berikut.
                     </p>
                 </div>
 
-                <div class="socials">
-                    
-                    <a class="social"
-                       href="https://wa.me/62895412086888"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="WhatsApp"
-                       title="WhatsApp">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12.04 2a9.9 9.9 0 0 0-8.53 14.92L2.2 22l5.25-1.38A9.96 9.96 0 1 0 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.11.82.83-3.03-.2-.31a8.2 8.2 0 1 1 6.96 3.84Zm4.5-6.14c-.25-.13-1.48-.73-1.71-.81-.23-.09-.4-.13-.57.13-.17.25-.65.81-.8.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.66-1.25-1.48-1.4-1.73-.14-.25-.01-.39.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.87-.21-.49-.42-.42-.57-.43h-.49c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.42 1.03 2.59.12.17 1.77 2.7 4.28 3.78.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.48-.6 1.69-1.19.21-.58.21-1.08.15-1.19-.06-.1-.23-.16-.48-.29Z"/>
+                <div class="social-list">
+                    <a class="social-link" data-social="whatsapp" href="#contact"
+                       aria-label="WhatsApp" title="WhatsApp">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.5 3.5A11.9 11.9 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4ZM12.1 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12.1 21.8Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.4 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2-1.5.2-.7.2-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/>
                         </svg>
+                        <span>WhatsApp</span>
+                        <span class="social-arrow">↗</span>
                     </a>
 
-                    <a class="social"
-                       href="https://www.facebook.com/Argia Rezky Pratama"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Facebook"
-                       title="Facebook">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.09 4.39 23.08 10.13 24v-8.44H7.08v-3.49h3.05V9.4c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.98h-1.52c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07Z"/>
+                    <a class="social-link" data-social="facebook" href="#contact"
+                       aria-label="Facebook" title="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1C0 18.1 4.4 23.1 10.1 24v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.3h3.4l-.5 3.5h-2.9V24C19.6 23.1 24 18.1 24 12.1Z"/>
                         </svg>
+                        <span>Facebook</span>
+                        <span class="social-arrow">↗</span>
                     </a>
 
-                    <a class="social"
-                       href="https://github.com/argiareky"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="GitHub"
-                       title="GitHub">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.59 1.21 3.22.93.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.25-5.09-5.51 0-1.22.43-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.5 10.5 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.27-2.62 5.22-5.11 5.5.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/>
+                    <a class="social-link" data-social="github" href="#contact"
+                       aria-label="GitHub" title="GitHub">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 .8a11.2 11.2 0 0 0-3.5 21.8c.6.1.8-.3.8-.6v-2.1c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.2-3-.1-.3-.5-1.4.1-3 0 0 .9-.3 3.1 1.2a10.5 10.5 0 0 1 5.5 0c2.1-1.5 3.1-1.2 3.1-1.2.6 1.6.2 2.7.1 3 .7.8 1.2 1.8 1.2 3 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2.1v3c0 .3.2.7.8.6A11.2 11.2 0 0 0 12 .8Z"/>
                         </svg>
+                        <span>GitHub</span>
+                        <span class="social-arrow">↗</span>
                     </a>
 
-                    <a class="social"
-                       href="https://www.instagram.com/_pratamass/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Instagram"
-                       title="Instagram">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm4.4 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.2-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/>
+                    <a class="social-link" data-social="instagram" href="#contact"
+                       aria-label="Instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/>
                         </svg>
+                        <span>Instagram</span>
+                        <span class="social-arrow">↗</span>
                     </a>
-
                 </div>
             </div>
+            <p class="contact-note" id="contact-note" aria-live="polite"></p>
         </section>
+    </main>
 
-        <footer>
-            <span>© 2026 Argia Rezky Pratama</span>
-            <span>Designed & built with HTML and CSS.</span>
-        </footer>
-
-    </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© <span id="year">2026</span> Argia Rezky Pratama</span>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
 </body>
 </html>
