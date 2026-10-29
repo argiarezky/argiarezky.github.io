@@ -61,8 +61,6 @@ a:focus-visible {
     margin-inline: auto;
 }
 
-/* NAVIGATION */
-
 .site-header {
     position: sticky;
     top: 0;
@@ -137,8 +135,6 @@ a:focus-visible {
     stroke-width: 1.7;
     stroke-linecap: round;
 }
-
-/* HERO */
 
 .hero {
     display: grid;
@@ -270,8 +266,6 @@ a:focus-visible {
     border-radius: 50%;
 }
 
-/* PROFILE PANEL */
-
 .hero-side {
     min-width: 0;
     padding: 14px;
@@ -341,8 +335,6 @@ a:focus-visible {
     letter-spacing: 1px;
 }
 
-/* SECTION BASE */
-
 .section {
     padding-block: 49px;
     border-top: 1px solid var(--border);
@@ -374,8 +366,6 @@ a:focus-visible {
     letter-spacing: 0.8px;
     white-space: nowrap;
 }
-
-/* ABOUT */
 
 .about-grid {
     display: grid;
@@ -430,8 +420,6 @@ a:focus-visible {
     color: #596272;
     font-size: 10px;
 }
-
-/* PROJECTS */
 
 .project-grid {
     display: grid;
@@ -546,8 +534,6 @@ a:focus-visible {
     display: none;
 }
 
-/* CONTACT */
-
 .contact-panel {
     display: flex;
     align-items: center;
@@ -632,8 +618,6 @@ a:focus-visible {
     transform: translate(-50%, 0);
 }
 
-/* FOOTER */
-
 .site-footer {
     margin-top: 20px;
     border-top: 1px solid var(--border);
@@ -652,8 +636,6 @@ a:focus-visible {
 .footer-inner a:hover {
     color: var(--accent);
 }
-
-/* RESPONSIVE */
 
 @media (min-width: 1200px) {
     .hero {
@@ -857,6 +839,9 @@ a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
+        .social-link > span:not(.social-name) {
+    display: none;
+}
     }
 
     *,
