@@ -1,40 +1,38 @@
-const menuToggle = document.getElementById("menuToggle");
-const nav = document.getElementById("nav");
+const menuBtn = document.getElementById("menuBtn");
+const navigation = document.getElementById("navigation");
+const navLinks = document.querySelectorAll(".nav-link");
 
-menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("show");
+// Mobile menu
+menuBtn.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("show");
 
-    menuToggle.textContent = nav.classList.contains("show")
-        ? "✕"
-        : "☰";
+    menuBtn.setAttribute("aria-expanded", isOpen);
 });
 
-document.querySelectorAll("#nav a").forEach(link => {
+// Close menu after navigation
+navLinks.forEach(link => {
     link.addEventListener("click", () => {
-        nav.classList.remove("show");
-        menuToggle.textContent = "☰";
+        navigation.classList.remove("show");
+        menuBtn.setAttribute("aria-expanded", "false");
     });
 });
 
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll("#nav a");
+// Active navigation
+const sections = document.querySelectorAll("main section[id]");
 
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === `#${entry.target.id}`
+                );
+            });
         }
     });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
-    });
+}, {
+    rootMargin: "-30% 0px -60% 0px"
 });
+
+sections.forEach(section => observer.observe(section));
