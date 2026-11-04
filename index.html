@@ -2,341 +2,202 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Portfolio Argia Rezky Pratama, Web Developer dan siswa Software Engineering.">
-
-    <title>Argia Rezky Pratama | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Argia Rezky Pratama - Web Developer & UI/UX Designer Portfolio">
+    <title>Argia Rezky | Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <header class="site-header">
-        <nav class="navbar container" aria-label="Navigasi utama">
-            <a class="brand" href="#home" aria-label="Kembali ke Home">
-                argia<span>.</span>
-            </a>
 
-            <button class="menu-toggle" id="menu-toggle"
-                    type="button" aria-label="Buka menu navigasi"
-                    aria-expanded="false" aria-controls="nav-links">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 7h16M4 12h16M4 17h16"/>
-                </svg>
-            </button>
+<header class="navbar">
+    <a href="#" class="logo">argia<span>.</span></a>
 
-            <div class="nav-links" id="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link contact-link">Contact <span>↗</span></a>
-            </div>
-        </nav>
-    </header>
+    <nav id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <main>
-        <section class="hero container" id="home">
-            <div class="hero-content">
-                <div class="availability">
-                    <span class="status-dot"></span>
-                    <span>Web Development · UI/UX</span>
-                </div>
+    <a href="#contact" class="nav-contact">Let's Talk ↗</a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+</header>
 
-                <p class="eyebrow">HELLO, I'M</p>
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="availability">
+                <span class="dot"></span> Available for opportunities
+            </span>
 
-                <h1>Argia Rezky<br><span>Pratama.</span></h1>
+            <p class="eyebrow">WEB DEVELOPER & UI/UX DESIGNER</p>
 
-                <h2 class="hero-role">
-                    Web Developer &amp; Software Engineering Student
-                </h2>
+            <h1>Building digital<br>experiences that<br><span>make sense.</span></h1>
 
-                <p class="hero-description">
-                    Saya membangun aplikasi web dan mengeksplorasi desain
-                    antarmuka. Saat ini saya terus mengembangkan skill melalui
-                    proyek dan pengalaman praktik.
-                </p>
-
-                <div class="hero-actions">
-                    <a href="#projects" class="button button-primary">
-                        Lihat Project <span aria-hidden="true">↗</span>
-                    </a>
-                    <a href="#contact" class="button button-secondary">
-                        Hubungi Saya
-                    </a>
-                </div>
-
-                <div class="hero-meta">
-                    <span>Based in Indonesia</span>
-                    <span class="meta-divider"></span>
-                    <span>HTML · CSS · PHP · Laravel</span>
-                </div>
-            </div>
-
-            <aside class="hero-side" aria-label="Ringkasan portfolio">
-                <div class="profile-frame">
-                    <img id="profile-photo" src="" alt="Foto profil Argia Rezky Pratama" hidden>
-                    <div class="profile-fallback" id="profile-fallback" aria-hidden="true">
-                        AR<span>.</span>
-                    </div>
-                </div>
-
-                <div class="side-info">
-                    <span class="side-label">CURRENT FOCUS</span>
-                    <p>Building web applications</p>
-                    <div class="side-line"></div>
-                    <span class="side-label">ALSO INTERESTED IN</span>
-                    <p>Interface &amp; user experience</p>
-                </div>
-
-                <span class="hero-index">PORTFOLIO / 2026</span>
-            </aside>
-        </section>
-
-        <section class="section container" id="about">
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">A LITTLE INTRODUCTION</p>
-                    <h2>About me<span>.</span></h2>
-                </div>
-                <span class="section-number">01 / ABOUT</span>
-            </div>
-
-            <div class="about-grid">
-                <p class="about-lead">
-                    Saya siswa SMK Telkom Jakarta yang tertarik pada
-                    pengembangan software, web, dan UI/UX design.
-                </p>
-
-                <div class="about-detail">
-                    <p>
-                        Saya belajar melalui proyek yang saya kerjakan,
-                        mulai dari aplikasi pengelolaan data hingga sistem
-                        ticketing. Saya juga tertarik pada cara desain
-                        antarmuka membantu pengguna menyelesaikan pekerjaan.
-                    </p>
-
-                    <p>
-                        Portfolio ini mendokumentasikan proyek, teknologi,
-                        dan perkembangan skill saya.
-                    </p>
-                </div>
-            </div>
-
-            <div class="skills-block">
-                <p class="small-label">TECH STACK &amp; TOOLS</p>
-                <div class="skill-list">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>PHP</span>
-                    <span>Laravel</span>
-                    <span>MySQL</span>
-                    <span>Git</span>
-                    <span>GitHub</span>
-                    <span>Figma</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="section container" id="projects">
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">SELECTED WORK</p>
-                    <h2>Projects<span>.</span></h2>
-                </div>
-                <span class="section-number">02 / PROJECTS</span>
-            </div>
-
-            <div class="project-grid">
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-category">WEB APPLICATION</span>
-                        <span class="project-icon" aria-hidden="true">01</span>
-                    </div>
-
-                    <h3>SSH HelpDesk</h3>
-                    <p class="project-description">
-                        Aplikasi ticketing internal untuk mengelola laporan,
-                        status tiket, dan aktivitas penanganan.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Laravel</span>
-                        <span>PHP</span>
-                        <span>Database</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a class="project-action" data-project="helpdesk" data-kind="demo" href="#projects">
-                            Live Demo ↗
-                        </a>
-                        <a class="project-action" data-project="helpdesk" data-kind="source" href="#projects">
-                            Source Code ↗
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-category">INVENTORY SYSTEM</span>
-                        <span class="project-icon" aria-hidden="true">02</span>
-                    </div>
-
-                    <h3>Warehouse Management</h3>
-                    <p class="project-description">
-                        Sistem pengelolaan gudang dengan dashboard staf,
-                        dashboard pengelola, dan fitur unggah gambar.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a class="project-action" data-project="warehouse" data-kind="demo" href="#projects">
-                            Live Demo ↗
-                        </a>
-                        <a class="project-action" data-project="warehouse" data-kind="source" href="#projects">
-                            Source Code ↗
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-category">INFORMATION SYSTEM</span>
-                        <span class="project-icon" aria-hidden="true">03</span>
-                    </div>
-
-                    <h3>SI Manajemen Siswa</h3>
-                    <p class="project-description">
-                        Proyek sistem informasi siswa untuk mempelajari
-                        autentikasi dan pengelolaan data.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Laravel</span>
-                        <span>PHP</span>
-                        <span>Database</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a class="project-action" data-project="students" data-kind="demo" href="#projects">
-                            Live Demo ↗
-                        </a>
-                        <a class="project-action" data-project="students" data-kind="source" href="#projects">
-                            Source Code ↗
-                        </a>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-top">
-                        <span class="project-category">UI/UX DESIGN</span>
-                        <span class="project-icon" aria-hidden="true">04</span>
-                    </div>
-
-                    <h3>UI/UX Design</h3>
-                    <p class="project-description">
-                        Kumpulan eksplorasi desain antarmuka dan pengalaman
-                        pengguna yang dibuat menggunakan Figma.
-                    </p>
-
-                    <div class="project-tags">
-                        <span>Figma</span>
-                        <span>UI Design</span>
-                        <span>UX Design</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a class="project-action" data-project="design" data-kind="demo" href="#projects">
-                            View Design ↗
-                        </a>
-                        <a class="project-action" data-project="design" data-kind="source" href="#projects">
-                            Case Study ↗
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <p class="project-note">
-                Link project yang belum tersedia akan diaktifkan setelah URL
-                demo atau repository ditambahkan.
+            <p class="hero-desc">
+                Hi, I'm Argia. I build functional websites and thoughtful
+                interfaces with a focus on usability and clean design.
             </p>
-        </section>
 
-        <section class="section container" id="contact">
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">GET IN TOUCH</p>
-                    <h2>Contact<span>.</span></h2>
-                </div>
-                <span class="section-number">03 / CONTACT</span>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">Explore Projects ↗</a>
+                <a href="#about" class="btn-secondary">More About Me</a>
             </div>
 
-            <div class="contact-panel">
-                <div class="contact-copy">
-                    <h3>Let's connect.</h3>
-                    <p>
-                        Kamu bisa menemukan saya melalui platform berikut.
-                    </p>
-                </div>
-
-                <div class="social-list">
-                    <a class="social-link" data-social="whatsapp" href="#contact"
-                       aria-label="WhatsApp" title="WhatsApp">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M20.5 3.5A11.9 11.9 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4ZM12.1 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12.1 21.8Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.4 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2 .1.6-.1 1.8-.7 2-1.5.2-.7.2-1.4.2-1.5-.1-.2-.3-.3-.6-.4Z"/>
-                        </svg>
-                        <span>WhatsApp</span>
-                        <span class="social-arrow">↗</span>
-                    </a>
-
-                    <a class="social-link" data-social="facebook" href="#contact"
-                       aria-label="Facebook" title="Facebook">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1C0 18.1 4.4 23.1 10.1 24v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.3h3.4l-.5 3.5h-2.9V24C19.6 23.1 24 18.1 24 12.1Z"/>
-                        </svg>
-                        <span>Facebook</span>
-                        <span class="social-arrow">↗</span>
-                    </a>
-
-                    <a class="social-link" data-social="github" href="#contact"
-                       aria-label="GitHub" title="GitHub">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 .8a11.2 11.2 0 0 0-3.5 21.8c.6.1.8-.3.8-.6v-2.1c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.2-3-.1-.3-.5-1.4.1-3 0 0 .9-.3 3.1 1.2a10.5 10.5 0 0 1 5.5 0c2.1-1.5 3.1-1.2 3.1-1.2.6 1.6.2 2.7.1 3 .7.8 1.2 1.8 1.2 3 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2.1v3c0 .3.2.7.8.6A11.2 11.2 0 0 0 12 .8Z"/>
-                        </svg>
-                        <span>GitHub</span>
-                        <span class="social-arrow">↗</span>
-                    </a>
-
-                    <a class="social-link" data-social="instagram" href="#contact"
-                       aria-label="Instagram" title="Instagram">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/>
-                        </svg>
-                        <span>Instagram</span>
-                        <span class="social-arrow">↗</span>
-                    </a>
-                </div>
+            <div class="socials">
+                <a href="https://github.com/argiarezky" target="_blank">GitHub ↗</a>
+                <a href="https://instagram.com/" target="_blank">Instagram ↗</a>
+                <a href="https://facebook.com/" target="_blank">Facebook ↗</a>
             </div>
-            <p class="contact-note" id="contact-note" aria-live="polite"></p>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <span>© <span id="year">2026</span> Argia Rezky Pratama</span>
-            <a href="#home">Back to top ↑</a>
         </div>
-    </footer>
+
+        <div class="hero-visual">
+            <div class="visual-card">
+                <div class="visual-top">
+                    <span>PORTFOLIO / 2026</span>
+                    <span>01 — 04</span>
+                </div>
+
+                <div class="visual-center">
+                    <div class="code-symbol">&lt;/&gt;</div>
+                    <h2>Design.<br>Develop.<br>Deliver.</h2>
+                </div>
+
+                <div class="visual-bottom">
+                    <span>CREATIVE DEVELOPER</span>
+                    <span>JAKARTA, ID</span>
+                </div>
+            </div>
+            <div class="visual-decoration"></div>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <div class="section-heading">
+            <span>01 / ABOUT</span>
+            <h2>A little about me.</h2>
+        </div>
+
+        <div class="about-content">
+            <p class="about-text">
+                I'm a vocational high school student focusing on
+                Software Engineering. I enjoy building web applications,
+                exploring UI/UX design, and solving problems through technology.
+            </p>
+
+            <div class="about-details">
+                <div><span>Based in</span><strong>Jakarta, Indonesia</strong></div>
+                <div><span>Education</span><strong>SMK Telkom Jakarta</strong></div>
+                <div><span>Focus</span><strong>Web Development</strong></div>
+            </div>
+        </div>
+
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>Laravel</span>
+            <span>MySQL</span>
+            <span>Figma</span>
+            <span>Git</span>
+        </div>
+    </section>
+
+    <section class="projects section" id="projects">
+        <div class="section-heading">
+            <span>02 / SELECTED WORKS</span>
+            <h2>Things I've built.</h2>
+        </div>
+
+        <div class="project-grid">
+            <article class="project-card">
+                <div class="project-image warehouse">
+                    <span>01</span>
+                    <div class="mock-dashboard">
+                        <div class="mock-sidebar"></div>
+                        <div class="mock-content">
+                            <div></div><div></div><div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div><span>WEB APPLICATION</span><span>2026</span></div>
+                    <h3>Warehouse Management</h3>
+                    <p>Inventory management system with staff and manager dashboards.</p>
+                    <small>PHP · MySQL · JavaScript</small>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image helpdesk">
+                    <span>02</span>
+                    <div class="helpdesk-ui">
+                        <div class="helpdesk-head"></div>
+                        <div class="helpdesk-stats">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <div class="helpdesk-chart"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div><span>WEB APPLICATION</span><span>2026</span></div>
+                    <h3>SSH HelpDesk</h3>
+                    <p>Ticketing system for managing IT support requests and activities.</p>
+                    <small>Laravel · PostgreSQL · Tailwind CSS</small>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image library">
+                    <span>03</span>
+                    <div class="library-ui">
+                        <div></div><div></div><div></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div><span>WEB APPLICATION</span><span>2025</span></div>
+                    <h3>Library Management</h3>
+                    <p>Library system for managing books and borrowing records.</p>
+                    <small>PHP · MySQL · Bootstrap</small>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image uiux">
+                    <span>04</span>
+                    <div class="uiux-ui">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div><span>UI/UX DESIGN</span><span>2025</span></div>
+                    <h3>Celza UI/UX</h3>
+                    <p>Interface design exploration focused on layout and user experience.</p>
+                    <small>Figma · UI Design · Prototyping</small>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <span>03 / GET IN TOUCH</span>
+        <h2>Have a project<br>in mind?</h2>
+        <p>Let's connect and create something meaningful.</p>
+        <a href="https://wa.me/62XXXXXXXXXX" class="btn-primary">Contact Me ↗</a>
+    </section>
+</main>
+
+<footer>
+    <a href="#" class="logo">argia<span>.</span></a>
+    <p>Designed & developed by Argia Rezky Pratama.</p>
+    <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
