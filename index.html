@@ -1,200 +1,378 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Argia Rezky Pratama - Web Developer & UI/UX Designer Portfolio">
-    <title>Argia Rezky | Portfolio</title>
+    <meta name="description" content="Argia Rezky Pratama. Web Developer and UI/UX Designer based in Jakarta.">
+    <title>Argia Rezky — Developer & Designer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="navbar">
-    <a href="#" class="logo">argia<span>.</span></a>
+<header class="header">
+    <a href="#home" class="brand">AR<span>.</span></a>
 
-    <nav id="nav">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <nav class="navigation" id="navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
-    <a href="#contact" class="nav-contact">Let's Talk ↗</a>
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <a href="#contact" class="header-cta">Let's talk <span>↗</span></a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+    </button>
 </header>
 
 <main>
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <span class="availability">
-                <span class="dot"></span> Available for opportunities
-            </span>
 
-            <p class="eyebrow">WEB DEVELOPER & UI/UX DESIGNER</p>
+    <!-- HERO -->
+    <section class="hero container" id="home">
 
-            <h1>Building digital<br>experiences that<br><span>make sense.</span></h1>
+        <div class="hero-left">
+            <div class="status">
+                <span class="status-dot"></span>
+                Open to opportunities
+            </div>
 
-            <p class="hero-desc">
-                Hi, I'm Argia. I build functional websites and thoughtful
-                interfaces with a focus on usability and clean design.
+            <p class="overline">INDEPENDENT DEVELOPER & DESIGNER</p>
+
+            <h1>
+                I build things<br>
+                for the <span>digital</span><br>
+                world<span class="orange">.</span>
+            </h1>
+
+            <p class="hero-description">
+                I'm Argia, a developer who enjoys turning ideas into
+                functional websites and thoughtful digital experiences.
             </p>
 
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-primary">Explore Projects ↗</a>
-                <a href="#about" class="btn-secondary">More About Me</a>
+            <div class="hero-actions">
+                <a href="#work" class="button button-dark">
+                    Explore my work <span>↗</span>
+                </a>
+
+                <a href="#about" class="text-link">
+                    More about me <span>↓</span>
+                </a>
             </div>
 
-            <div class="socials">
-                <a href="https://github.com/argiarezky" target="_blank">GitHub ↗</a>
-                <a href="https://instagram.com/" target="_blank">Instagram ↗</a>
-                <a href="https://facebook.com/" target="_blank">Facebook ↗</a>
+            <div class="hero-footer">
+                <span>BASED IN JAKARTA, INDONESIA</span>
+                <span>AVAILABLE FOR NEW PROJECTS</span>
             </div>
         </div>
 
-        <div class="hero-visual">
-            <div class="visual-card">
-                <div class="visual-top">
-                    <span>PORTFOLIO / 2026</span>
-                    <span>01 — 04</span>
+        <div class="hero-right">
+            <div class="hero-art">
+                <div class="art-top">
+                    <span>CREATIVE PORTFOLIO</span>
+                    <span>2026 / 01</span>
                 </div>
 
-                <div class="visual-center">
-                    <div class="code-symbol">&lt;/&gt;</div>
-                    <h2>Design.<br>Develop.<br>Deliver.</h2>
+                <div class="art-main">
+                    <div class="art-circle">
+                        <span>AR</span>
+                    </div>
+
+                    <div class="art-cross">+</div>
+
+                    <div class="art-caption">
+                        <span>THINK</span>
+                        <span>BUILD</span>
+                        <span>CREATE</span>
+                    </div>
                 </div>
 
-                <div class="visual-bottom">
-                    <span>CREATIVE DEVELOPER</span>
-                    <span>JAKARTA, ID</span>
+                <div class="art-bottom">
+                    <span>DESIGN MEETS TECHNOLOGY</span>
+                    <span>EST. 2009</span>
                 </div>
             </div>
-            <div class="visual-decoration"></div>
+
+            <div class="floating-note">
+                <span class="note-icon">✳</span>
+                <div>
+                    <strong>Curious by nature.</strong>
+                    <small>Building through learning.</small>
+                </div>
+            </div>
         </div>
+
     </section>
 
-    <section class="about section" id="about">
-        <div class="section-heading">
-            <span>01 / ABOUT</span>
-            <h2>A little about me.</h2>
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>WEB DEVELOPMENT</span><i>✳</i>
+            <span>UI / UX DESIGN</span><i>✳</i>
+            <span>CREATIVE THINKING</span><i>✳</i>
+            <span>WEB DEVELOPMENT</span><i>✳</i>
+            <span>UI / UX DESIGN</span><i>✳</i>
+            <span>CREATIVE THINKING</span><i>✳</i>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about container section" id="about">
+
+        <div class="section-label">
+            <span>01 / ABOUT ME</span>
+            <span>GET TO KNOW ME</span>
         </div>
 
-        <div class="about-content">
-            <p class="about-text">
-                I'm a vocational high school student focusing on
-                Software Engineering. I enjoy building web applications,
-                exploring UI/UX design, and solving problems through technology.
-            </p>
+        <div class="about-grid">
+            <h2>
+                A little bit<br>
+                about <span>myself.</span>
+            </h2>
 
-            <div class="about-details">
-                <div><span>Based in</span><strong>Jakarta, Indonesia</strong></div>
-                <div><span>Education</span><strong>SMK Telkom Jakarta</strong></div>
-                <div><span>Focus</span><strong>Web Development</strong></div>
+            <div class="about-content">
+                <p class="about-intro">
+                    I'm a Software Engineering student at SMK Telkom Jakarta
+                    with an interest in web development and interface design.
+                </p>
+
+                <p>
+                    I enjoy working with code, exploring new technologies,
+                    and creating interfaces that are practical and easy to use.
+                    Every project is an opportunity to improve my skills.
+                </p>
+
+                <div class="about-meta">
+                    <div>
+                        <span>EDUCATION</span>
+                        <strong>SMK Telkom Jakarta</strong>
+                    </div>
+                    <div>
+                        <span>INTEREST</span>
+                        <strong>Web Development / UI UX</strong>
+                    </div>
+                    <div>
+                        <span>LOCATION</span>
+                        <strong>Jakarta, Indonesia</strong>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>PHP</span>
-            <span>Laravel</span>
-            <span>MySQL</span>
-            <span>Figma</span>
-            <span>Git</span>
+            <span class="skills-title">TOOLS & TECHNOLOGIES</span>
+            <div class="skill-list">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>Laravel</span>
+                <span>MySQL</span>
+                <span>PostgreSQL</span>
+                <span>Figma</span>
+                <span>Git</span>
+            </div>
         </div>
+
     </section>
 
-    <section class="projects section" id="projects">
-        <div class="section-heading">
-            <span>02 / SELECTED WORKS</span>
-            <h2>Things I've built.</h2>
-        </div>
+    <!-- PROJECTS -->
+    <section class="work section" id="work">
 
-        <div class="project-grid">
-            <article class="project-card">
-                <div class="project-image warehouse">
-                    <span>01</span>
-                    <div class="mock-dashboard">
-                        <div class="mock-sidebar"></div>
-                        <div class="mock-content">
-                            <div></div><div></div><div></div>
+        <div class="container">
+            <div class="section-label">
+                <span>02 / SELECTED WORK</span>
+                <span>A FEW THINGS I'VE BUILT</span>
+            </div>
+
+            <div class="work-heading">
+                <h2>Selected <span>projects.</span></h2>
+                <p>A collection of projects, experiments, and things I've worked on.</p>
+            </div>
+
+            <div class="project-grid">
+
+                <article class="project">
+                    <a href="#" class="project-preview preview-one" aria-label="Warehouse project">
+                        <div class="preview-header">
+                            <span>WAREHOUSE SYSTEM</span>
+                            <span>01 / 04</span>
+                        </div>
+                        <div class="warehouse-screen">
+                            <aside>
+                                <b>W.</b>
+                                <span></span><span></span><span></span><span></span>
+                            </aside>
+                            <div class="warehouse-main">
+                                <div class="screen-title">Dashboard Overview</div>
+                                <div class="screen-cards">
+                                    <i></i><i></i><i></i>
+                                </div>
+                                <div class="screen-table">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="project-details">
+                        <div class="project-title">
+                            <div>
+                                <span>WEB APPLICATION</span>
+                                <h3>Warehouse Management</h3>
+                            </div>
+                            <span class="project-arrow">↗</span>
+                        </div>
+                        <p>Inventory management with separate staff and manager dashboards.</p>
+                        <div class="project-tags">
+                            <span>PHP</span><span>MySQL</span><span>JavaScript</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-info">
-                    <div><span>WEB APPLICATION</span><span>2026</span></div>
-                    <h3>Warehouse Management</h3>
-                    <p>Inventory management system with staff and manager dashboards.</p>
-                    <small>PHP · MySQL · JavaScript</small>
-                </div>
-            </article>
+                </article>
 
-            <article class="project-card">
-                <div class="project-image helpdesk">
-                    <span>02</span>
-                    <div class="helpdesk-ui">
-                        <div class="helpdesk-head"></div>
-                        <div class="helpdesk-stats">
-                            <i></i><i></i><i></i>
+                <article class="project">
+                    <a href="#" class="project-preview preview-two" aria-label="SSH HelpDesk project">
+                        <div class="preview-header">
+                            <span>SSH HELPDESK</span>
+                            <span>02 / 04</span>
                         </div>
-                        <div class="helpdesk-chart"></div>
+                        <div class="helpdesk-screen">
+                            <div class="helpdesk-sidebar">
+                                <b>SSH.</b>
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="helpdesk-main">
+                                <div class="helpdesk-heading">Ticket Overview</div>
+                                <div class="helpdesk-cards">
+                                    <i></i><i></i><i></i>
+                                </div>
+                                <div class="helpdesk-graph">
+                                    <div></div><div></div><div></div><div></div>
+                                    <div></div><div></div><div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="project-details">
+                        <div class="project-title">
+                            <div>
+                                <span>WEB APPLICATION</span>
+                                <h3>SSH HelpDesk</h3>
+                            </div>
+                            <span class="project-arrow">↗</span>
+                        </div>
+                        <p>IT support ticketing system for tracking requests and activities.</p>
+                        <div class="project-tags">
+                            <span>Laravel</span><span>PostgreSQL</span><span>Tailwind</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-info">
-                    <div><span>WEB APPLICATION</span><span>2026</span></div>
-                    <h3>SSH HelpDesk</h3>
-                    <p>Ticketing system for managing IT support requests and activities.</p>
-                    <small>Laravel · PostgreSQL · Tailwind CSS</small>
-                </div>
-            </article>
+                </article>
 
-            <article class="project-card">
-                <div class="project-image library">
-                    <span>03</span>
-                    <div class="library-ui">
-                        <div></div><div></div><div></div>
+                <article class="project">
+                    <a href="#" class="project-preview preview-three" aria-label="Library project">
+                        <div class="preview-header">
+                            <span>LIBRARY MANAGEMENT</span>
+                            <span>03 / 04</span>
+                        </div>
+                        <div class="library-screen">
+                            <div class="library-title">Library<span>.</span></div>
+                            <div class="book-row">
+                                <i></i><i></i><i></i>
+                            </div>
+                            <div class="library-lines">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="project-details">
+                        <div class="project-title">
+                            <div>
+                                <span>WEB APPLICATION</span>
+                                <h3>Library Management</h3>
+                            </div>
+                            <span class="project-arrow">↗</span>
+                        </div>
+                        <p>A system for managing library books and borrowing records.</p>
+                        <div class="project-tags">
+                            <span>PHP</span><span>MySQL</span><span>CSS</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-info">
-                    <div><span>WEB APPLICATION</span><span>2025</span></div>
-                    <h3>Library Management</h3>
-                    <p>Library system for managing books and borrowing records.</p>
-                    <small>PHP · MySQL · Bootstrap</small>
-                </div>
-            </article>
+                </article>
 
-            <article class="project-card">
-                <div class="project-image uiux">
-                    <span>04</span>
-                    <div class="uiux-ui">
-                        <div></div>
-                        <div></div>
+                <article class="project">
+                    <a href="#" class="project-preview preview-four" aria-label="Celza UI UX project">
+                        <div class="preview-header">
+                            <span>CELZA UI / UX</span>
+                            <span>04 / 04</span>
+                        </div>
+                        <div class="celza-screen">
+                            <div class="celza-left">
+                                <span>CELZA</span>
+                                <h3>Simple ideas.<br>Better experience.</h3>
+                                <div></div>
+                            </div>
+                            <div class="celza-right">
+                                <i></i><i></i><i></i>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="project-details">
+                        <div class="project-title">
+                            <div>
+                                <span>UI / UX DESIGN</span>
+                                <h3>Celza Interface</h3>
+                            </div>
+                            <span class="project-arrow">↗</span>
+                        </div>
+                        <p>Interface design exploration focused on usability and layout.</p>
+                        <div class="project-tags">
+                            <span>Figma</span><span>UI Design</span><span>Prototype</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-info">
-                    <div><span>UI/UX DESIGN</span><span>2025</span></div>
-                    <h3>Celza UI/UX</h3>
-                    <p>Interface design exploration focused on layout and user experience.</p>
-                    <small>Figma · UI Design · Prototyping</small>
-                </div>
-            </article>
+                </article>
+
+            </div>
         </div>
     </section>
 
-    <section class="contact section" id="contact">
-        <span>03 / GET IN TOUCH</span>
-        <h2>Have a project<br>in mind?</h2>
-        <p>Let's connect and create something meaningful.</p>
-        <a href="https://wa.me/62XXXXXXXXXX" class="btn-primary">Contact Me ↗</a>
+    <!-- CONTACT -->
+    <section class="contact container section" id="contact">
+        <div class="section-label">
+            <span>03 / CONTACT</span>
+            <span>LET'S CONNECT</span>
+        </div>
+
+        <div class="contact-content">
+            <div>
+                <span class="contact-overline">HAVE SOMETHING IN MIND?</span>
+                <h2>Let's make<br>it <span>happen.</span></h2>
+            </div>
+
+            <div class="contact-right">
+                <p>Have an idea, opportunity, or just want to connect? My inbox is open.</p>
+                <a href="mailto:yourmail@example.com" class="button button-dark">
+                    Get in touch <span>↗</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-links">
+            <a href="https://github.com/argiarezky" target="_blank">GitHub ↗</a>
+            <a href="https://instagram.com/" target="_blank">Instagram ↗</a>
+            <a href="https://facebook.com/" target="_blank">Facebook ↗</a>
+        </div>
     </section>
+
 </main>
 
-<footer>
-    <a href="#" class="logo">argia<span>.</span></a>
-    <p>Designed & developed by Argia Rezky Pratama.</p>
+<footer class="footer container">
+    <a href="#home" class="brand">AR<span>.</span></a>
+    <p>Designed & built by Argia Rezky Pratama.</p>
     <span>© 2026</span>
 </footer>
 
