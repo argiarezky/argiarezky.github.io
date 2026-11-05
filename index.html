@@ -1,161 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Argia Rezky Pratama. Web Developer and UI/UX Designer based in Jakarta.">
-    <title>Argia Rezky — Developer & Designer</title>
+    <meta name="description" content="Argia Rezky Pratama — Web Developer and UI/UX Designer">
+    <title>Argia Rezky — Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-    <a href="#home" class="brand">AR<span>.</span></a>
+    <a href="#home" class="brand" aria-label="Argia Rezky home">
+        <svg class="logo" viewBox="0 0 52 42" fill="none">
+            <path d="M3 38L20 4L37 38M10 25H30"
+                  stroke="currentColor" stroke-width="4"
+                  stroke-linecap="square"/>
+            <path d="M29 4H40C46 4 49 8 49 14C49 20 45 24 38 24H29M38 24L49 38"
+                  stroke="currentColor" stroke-width="4"
+                  stroke-linecap="square" stroke-linejoin="miter"/>
+        </svg>
+        <span>ARGIA REZKY</span>
+    </a>
 
-    <nav class="navigation" id="navigation">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#work" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
+    <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <a href="#contact" class="header-cta">Let's talk <span>↗</span></a>
+    <a href="#contact" class="header-link">Get in touch <span>↗</span></a>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation">
+        <span></span><span></span>
     </button>
 </header>
 
 <main>
-
-    <!-- HERO -->
     <section class="hero container" id="home">
-
-        <div class="hero-left">
-            <div class="status">
-                <span class="status-dot"></span>
-                Open to opportunities
+        <div class="hero-main">
+            <div class="eyebrow">
+                <span class="availability"></span>
+                JAKARTA, INDONESIA
             </div>
-
-            <p class="overline">INDEPENDENT DEVELOPER & DESIGNER</p>
 
             <h1>
-                I build things<br>
-                for the <span>digital</span><br>
-                world<span class="orange">.</span>
+                Building for<br>
+                the <span>digital</span><br>
+                world.
             </h1>
 
-            <p class="hero-description">
-                I'm Argia, a developer who enjoys turning ideas into
-                functional websites and thoughtful digital experiences.
-            </p>
+            <div class="hero-bottom">
+                <p>
+                    I'm Argia, a Software Engineering student interested
+                    in building web applications and designing useful
+                    digital experiences.
+                </p>
 
-            <div class="hero-actions">
-                <a href="#work" class="button button-dark">
-                    Explore my work <span>↗</span>
+                <a href="#projects" class="primary-link">
+                    Explore selected work <span>↘</span>
                 </a>
-
-                <a href="#about" class="text-link">
-                    More about me <span>↓</span>
-                </a>
-            </div>
-
-            <div class="hero-footer">
-                <span>BASED IN JAKARTA, INDONESIA</span>
-                <span>AVAILABLE FOR NEW PROJECTS</span>
             </div>
         </div>
 
-        <div class="hero-right">
-            <div class="hero-art">
-                <div class="art-top">
-                    <span>CREATIVE PORTFOLIO</span>
-                    <span>2026 / 01</span>
+        <div class="hero-aside">
+            <div class="identity">
+                <div class="identity-logo">
+                    <svg viewBox="0 0 100 80" fill="none">
+                        <path d="M4 74L35 6L66 74M17 49H54"
+                              stroke="currentColor" stroke-width="7"/>
+                        <path d="M57 6H78C90 6 96 14 96 26C96 38 87 45 73 45H57M75 45L96 74"
+                              stroke="currentColor" stroke-width="7"/>
+                    </svg>
                 </div>
-
-                <div class="art-main">
-                    <div class="art-circle">
-                        <span>AR</span>
-                    </div>
-
-                    <div class="art-cross">+</div>
-
-                    <div class="art-caption">
-                        <span>THINK</span>
-                        <span>BUILD</span>
-                        <span>CREATE</span>
-                    </div>
-                </div>
-
-                <div class="art-bottom">
-                    <span>DESIGN MEETS TECHNOLOGY</span>
-                    <span>EST. 2009</span>
-                </div>
+                <span>PERSONAL PORTFOLIO</span>
+                <span>EST. 2026</span>
             </div>
 
-            <div class="floating-note">
-                <span class="note-icon">✳</span>
-                <div>
-                    <strong>Curious by nature.</strong>
-                    <small>Building through learning.</small>
-                </div>
+            <div class="aside-description">
+                <span>01 — WHAT I DO</span>
+                <p>Web Development<br>Interface Design<br>Creative Exploration</p>
             </div>
+
+            <div class="aside-description">
+                <span>02 — CURRENTLY</span>
+                <p>Learning, building<br>and improving.</p>
+            </div>
+
+            <div class="aside-index">AR / 001</div>
         </div>
-
     </section>
 
-    <!-- MARQUEE -->
-    <div class="marquee">
-        <div class="marquee-track">
-            <span>WEB DEVELOPMENT</span><i>✳</i>
-            <span>UI / UX DESIGN</span><i>✳</i>
-            <span>CREATIVE THINKING</span><i>✳</i>
-            <span>WEB DEVELOPMENT</span><i>✳</i>
-            <span>UI / UX DESIGN</span><i>✳</i>
-            <span>CREATIVE THINKING</span><i>✳</i>
-        </div>
-    </div>
-
-    <!-- ABOUT -->
-    <section class="about container section" id="about">
-
-        <div class="section-label">
-            <span>01 / ABOUT ME</span>
-            <span>GET TO KNOW ME</span>
+    <section class="about section container" id="about">
+        <div class="section-top">
+            <span>01 / ABOUT</span>
+            <span>A LITTLE INTRODUCTION</span>
         </div>
 
         <div class="about-grid">
-            <h2>
-                A little bit<br>
-                about <span>myself.</span>
-            </h2>
+            <h2>Not just code.<br><span>Thoughtful work.</span></h2>
 
-            <div class="about-content">
-                <p class="about-intro">
-                    I'm a Software Engineering student at SMK Telkom Jakarta
-                    with an interest in web development and interface design.
+            <div class="about-copy">
+                <p class="large-copy">
+                    I enjoy the process of turning ideas into
+                    functional and well-designed digital products.
                 </p>
 
                 <p>
-                    I enjoy working with code, exploring new technologies,
-                    and creating interfaces that are practical and easy to use.
-                    Every project is an opportunity to improve my skills.
+                    I'm currently studying Software Engineering at
+                    SMK Telkom Jakarta. My interests include web
+                    development, database systems, and UI/UX design.
                 </p>
 
-                <div class="about-meta">
+                <div class="personal-info">
                     <div>
                         <span>EDUCATION</span>
                         <strong>SMK Telkom Jakarta</strong>
                     </div>
                     <div>
-                        <span>INTEREST</span>
-                        <strong>Web Development / UI UX</strong>
+                        <span>FIELD</span>
+                        <strong>Software Engineering</strong>
                     </div>
                     <div>
                         <span>LOCATION</span>
@@ -165,11 +133,11 @@
             </div>
         </div>
 
-        <div class="skills">
-            <span class="skills-title">TOOLS & TECHNOLOGIES</span>
-            <div class="skill-list">
-                <span>HTML5</span>
-                <span>CSS3</span>
+        <div class="tech-stack">
+            <span class="stack-label">TECHNOLOGIES & TOOLS</span>
+            <div class="stack-list">
+                <span>HTML</span>
+                <span>CSS</span>
                 <span>JavaScript</span>
                 <span>PHP</span>
                 <span>Laravel</span>
@@ -179,160 +147,119 @@
                 <span>Git</span>
             </div>
         </div>
-
     </section>
 
-    <!-- PROJECTS -->
-    <section class="work section" id="work">
-
+    <section class="projects section" id="projects">
         <div class="container">
-            <div class="section-label">
-                <span>02 / SELECTED WORK</span>
-                <span>A FEW THINGS I'VE BUILT</span>
+            <div class="section-top">
+                <span>02 / SELECTED PROJECTS</span>
+                <span>2025 — 2026</span>
             </div>
 
-            <div class="work-heading">
-                <h2>Selected <span>projects.</span></h2>
-                <p>A collection of projects, experiments, and things I've worked on.</p>
+            <div class="projects-heading">
+                <h2>Selected work<span>.</span></h2>
+                <p>A selection of things I've designed and developed.</p>
             </div>
 
-            <div class="project-grid">
+            <div class="project-list">
 
                 <article class="project">
-                    <a href="#" class="project-preview preview-one" aria-label="Warehouse project">
-                        <div class="preview-header">
-                            <span>WAREHOUSE SYSTEM</span>
-                            <span>01 / 04</span>
-                        </div>
-                        <div class="warehouse-screen">
-                            <aside>
-                                <b>W.</b>
-                                <span></span><span></span><span></span><span></span>
-                            </aside>
-                            <div class="warehouse-main">
-                                <div class="screen-title">Dashboard Overview</div>
-                                <div class="screen-cards">
-                                    <i></i><i></i><i></i>
-                                </div>
-                                <div class="screen-table">
-                                    <span></span><span></span><span></span>
-                                </div>
+                    <div class="project-image">
+                        <img src="assets/warehouse.png"
+                             alt="Warehouse Management interface"
+                             onerror="this.style.display='none'">
+                        <span class="image-placeholder">01 / WAREHOUSE MANAGEMENT</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-number">01</div>
+                        <div class="project-description">
+                            <span>WEB APPLICATION</span>
+                            <h3>Warehouse Management</h3>
+                            <p>
+                                An inventory management application with
+                                separate dashboards for staff and managers.
+                            </p>
+                            <div class="tags">
+                                <span>PHP</span><span>MySQL</span><span>JavaScript</span>
                             </div>
                         </div>
-                    </a>
-                    <div class="project-details">
-                        <div class="project-title">
-                            <div>
-                                <span>WEB APPLICATION</span>
-                                <h3>Warehouse Management</h3>
-                            </div>
-                            <span class="project-arrow">↗</span>
-                        </div>
-                        <p>Inventory management with separate staff and manager dashboards.</p>
-                        <div class="project-tags">
-                            <span>PHP</span><span>MySQL</span><span>JavaScript</span>
-                        </div>
+                        <span class="project-arrow">↗</span>
                     </div>
                 </article>
 
                 <article class="project">
-                    <a href="#" class="project-preview preview-two" aria-label="SSH HelpDesk project">
-                        <div class="preview-header">
-                            <span>SSH HELPDESK</span>
-                            <span>02 / 04</span>
-                        </div>
-                        <div class="helpdesk-screen">
-                            <div class="helpdesk-sidebar">
-                                <b>SSH.</b>
-                                <span></span><span></span><span></span>
+                    <div class="project-image">
+                        <img src="assets/helpdesk.png"
+                             alt="SSH HelpDesk interface"
+                             onerror="this.style.display='none'">
+                        <span class="image-placeholder">02 / SSH HELPDESK</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-number">02</div>
+                        <div class="project-description">
+                            <span>WEB APPLICATION</span>
+                            <h3>SSH HelpDesk</h3>
+                            <p>
+                                An IT support ticketing system for managing
+                                requests, statuses, and ticket activities.
+                            </p>
+                            <div class="tags">
+                                <span>Laravel</span><span>PostgreSQL</span><span>Tailwind</span>
                             </div>
-                            <div class="helpdesk-main">
-                                <div class="helpdesk-heading">Ticket Overview</div>
-                                <div class="helpdesk-cards">
-                                    <i></i><i></i><i></i>
-                                </div>
-                                <div class="helpdesk-graph">
-                                    <div></div><div></div><div></div><div></div>
-                                    <div></div><div></div><div></div>
-                                </div>
-                            </div>
                         </div>
-                    </a>
-                    <div class="project-details">
-                        <div class="project-title">
-                            <div>
-                                <span>WEB APPLICATION</span>
-                                <h3>SSH HelpDesk</h3>
-                            </div>
-                            <span class="project-arrow">↗</span>
-                        </div>
-                        <p>IT support ticketing system for tracking requests and activities.</p>
-                        <div class="project-tags">
-                            <span>Laravel</span><span>PostgreSQL</span><span>Tailwind</span>
-                        </div>
+                        <span class="project-arrow">↗</span>
                     </div>
                 </article>
 
                 <article class="project">
-                    <a href="#" class="project-preview preview-three" aria-label="Library project">
-                        <div class="preview-header">
-                            <span>LIBRARY MANAGEMENT</span>
-                            <span>03 / 04</span>
-                        </div>
-                        <div class="library-screen">
-                            <div class="library-title">Library<span>.</span></div>
-                            <div class="book-row">
-                                <i></i><i></i><i></i>
+                    <div class="project-image">
+                        <img src="assets/library.png"
+                             alt="Library Management interface"
+                             onerror="this.style.display='none'">
+                        <span class="image-placeholder">03 / LIBRARY MANAGEMENT</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-number">03</div>
+                        <div class="project-description">
+                            <span>WEB APPLICATION</span>
+                            <h3>Library Management</h3>
+                            <p>
+                                A library application for managing book
+                                collections and borrowing records.
+                            </p>
+                            <div class="tags">
+                                <span>PHP</span><span>MySQL</span><span>CSS</span>
                             </div>
-                            <div class="library-lines">
-                                <span></span><span></span><span></span>
-                            </div>
                         </div>
-                    </a>
-                    <div class="project-details">
-                        <div class="project-title">
-                            <div>
-                                <span>WEB APPLICATION</span>
-                                <h3>Library Management</h3>
-                            </div>
-                            <span class="project-arrow">↗</span>
-                        </div>
-                        <p>A system for managing library books and borrowing records.</p>
-                        <div class="project-tags">
-                            <span>PHP</span><span>MySQL</span><span>CSS</span>
-                        </div>
+                        <span class="project-arrow">↗</span>
                     </div>
                 </article>
 
                 <article class="project">
-                    <a href="#" class="project-preview preview-four" aria-label="Celza UI UX project">
-                        <div class="preview-header">
-                            <span>CELZA UI / UX</span>
-                            <span>04 / 04</span>
-                        </div>
-                        <div class="celza-screen">
-                            <div class="celza-left">
-                                <span>CELZA</span>
-                                <h3>Simple ideas.<br>Better experience.</h3>
-                                <div></div>
+                    <div class="project-image">
+                        <img src="assets/celza.png"
+                             alt="Celza UI UX design"
+                             onerror="this.style.display='none'">
+                        <span class="image-placeholder">04 / CELZA UI UX</span>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-number">04</div>
+                        <div class="project-description">
+                            <span>UI / UX DESIGN</span>
+                            <h3>Celza Interface</h3>
+                            <p>
+                                A UI/UX design project exploring visual
+                                hierarchy, layout, and user experience.
+                            </p>
+                            <div class="tags">
+                                <span>Figma</span><span>UI Design</span><span>Prototype</span>
                             </div>
-                            <div class="celza-right">
-                                <i></i><i></i><i></i>
-                            </div>
                         </div>
-                    </a>
-                    <div class="project-details">
-                        <div class="project-title">
-                            <div>
-                                <span>UI / UX DESIGN</span>
-                                <h3>Celza Interface</h3>
-                            </div>
-                            <span class="project-arrow">↗</span>
-                        </div>
-                        <p>Interface design exploration focused on usability and layout.</p>
-                        <div class="project-tags">
-                            <span>Figma</span><span>UI Design</span><span>Prototype</span>
-                        </div>
+                        <span class="project-arrow">↗</span>
                     </div>
                 </article>
 
@@ -340,39 +267,37 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact container section" id="contact">
-        <div class="section-label">
+    <section class="contact section container" id="contact">
+        <div class="section-top">
             <span>03 / CONTACT</span>
             <span>LET'S CONNECT</span>
         </div>
 
         <div class="contact-content">
-            <div>
-                <span class="contact-overline">HAVE SOMETHING IN MIND?</span>
-                <h2>Let's make<br>it <span>happen.</span></h2>
-            </div>
+            <h2>Have something<br>in mind<span>?</span></h2>
 
-            <div class="contact-right">
-                <p>Have an idea, opportunity, or just want to connect? My inbox is open.</p>
-                <a href="mailto:yourmail@example.com" class="button button-dark">
-                    Get in touch <span>↗</span>
+            <div class="contact-description">
+                <p>
+                    Interested in working together or simply
+                    want to connect? Feel free to reach out.
+                </p>
+                <a href="mailto:yourmail@example.com" class="email-link">
+                    Send me an email ↗
                 </a>
             </div>
         </div>
 
-        <div class="contact-links">
+        <div class="social-links">
             <a href="https://github.com/argiarezky" target="_blank">GitHub ↗</a>
             <a href="https://instagram.com/" target="_blank">Instagram ↗</a>
             <a href="https://facebook.com/" target="_blank">Facebook ↗</a>
         </div>
     </section>
-
 </main>
 
 <footer class="footer container">
-    <a href="#home" class="brand">AR<span>.</span></a>
-    <p>Designed & built by Argia Rezky Pratama.</p>
+    <a href="#home" class="footer-brand">AR.</a>
+    <span>Designed and developed by Argia Rezky Pratama.</span>
     <span>© 2026</span>
 </footer>
 
