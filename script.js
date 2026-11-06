@@ -1,8 +1,8 @@
-
 const menuButton = document.getElementById("menuButton");
 const nav = document.getElementById("nav");
 const navLinks = document.querySelectorAll(".nav a");
 
+// Mobile navigation
 menuButton.addEventListener("click", () => {
     const opened = nav.classList.toggle("show");
 
